@@ -22,4 +22,6 @@ while True:
             print('ERRO! Opção inválida')
     if cont in ('N'):
         break
+    elif cont in 'S':
+        print('OK! VAMOS CONTINUAR')
 moedas.format('OBRIGADO POR USAR O CONVERSOR DE MOEDAS!')
