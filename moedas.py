@@ -42,7 +42,7 @@ def moeda2(res1, * moedas):
 
 
 def leiaFloat(msg):
-    # Função que irá ler um número de ponto flutuante, caso o número digitado não seja um número, tenha mais de 2 casa decimais ou não tenha nenhuma casa inteira exibirá um erro ao usuário.
+    # Função que irá ler um número de ponto flutuante, caso o número digitado não seja um número, tenha mais de 2 casa decimais, ou seja um número negativo ou não tenha nenhuma casa inteira exibirá um erro ao usuário.
     while True:
         num = str(input(msg).strip())
         num = num.replace(',', '.')
@@ -56,7 +56,11 @@ def leiaFloat(msg):
                 print('ERRO! Valor digitado inválido')
                 print('-' * 50)
             else:
-                return num
+                if num < 0:
+                    print('ERRO! Valor digitado inválido')
+                    print('-' * 50)
+                else:
+                    return num
         else:
             try:
                 num = float(num)
@@ -64,7 +68,7 @@ def leiaFloat(msg):
                 print('ERRO! Valor digitado inválido')
                 print('-' * 50)
             else:
-                if casas_decimais <= 1 or casas_decimais > 2 or casas_inteiras == 0:
+                if casas_decimais <= 1 or casas_decimais > 2 or casas_inteiras == 0 or num < 0:
                     print('ERRO! Valor digitado inválido')
                     print('-' * 50)
                 elif casas_decimais == 2:
