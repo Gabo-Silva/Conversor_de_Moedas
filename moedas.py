@@ -53,11 +53,11 @@ def leiaFloat(msg):
             try:
                 num = float(num)
             except:
-                print('ERRO! Valor digitado inválido')
+                print('ERRO! Valor digitado inválido.')
                 print('-' * 50)
             else:
                 if num < 0:
-                    print('ERRO! Valor digitado inválido')
+                    print('ERRO! Valor digitado inválido.')
                     print('-' * 50)
                 else:
                     return num
@@ -65,11 +65,11 @@ def leiaFloat(msg):
             try:
                 num = float(num)
             except:
-                print('ERRO! Valor digitado inválido')
+                print('ERRO! Valor digitado inválido.')
                 print('-' * 50)
             else:
                 if casas_decimais <= 1 or casas_decimais > 2 or casas_inteiras == 0 or num < 0:
-                    print('ERRO! Valor digitado inválido')
+                    print('ERRO! Valor digitado inválido.')
                     print('-' * 50)
                 elif casas_decimais == 2:
                     return num
